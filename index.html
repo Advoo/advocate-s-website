@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Advocate Karabo — Portfolio</title>
+  <meta name="description" content="Portfolio of Advocate Karabo — Moshal Scholar, UWC student, photographer, podcaster & developer." />
+  <meta name="author" content="Advocate Karabo" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%C2%A9%3C/text%3E%3C/svg%3E">
+
+  <style>
+    /* ====== Reset & base ====== */
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      line-height:1.4;color:#0f172a;background:linear-gradient(180deg,#f8fafc 0%, #eef2f7 100%);
+      -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+    }
+    a{color:inherit;text-decoration:none}
+
+    /* ====== Container ====== */
+    .container{max-width:1100px;margin:32px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+
+    /* ====== Brand ====== */
+    .brand{display:flex;align-items:center;gap:12px}
+    .avatar{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,hsl(185, 92%, 10%),hsl(0, 0%, 100%));display:flex;align-items:center;justify-content:center;color:white;font-weight:600;font-size:15px}
+    h1{margin:0;font-size:29px}
+    .sub{color:#475569;font-size:13px}
+
+    /* ====== Nav ====== */
+    nav{display:flex;gap:12px}
+    .navlink{padding:8px 12px;border-radius:10px;background:transparent;color:#0f172a;font-weight:600}
+    .navlink:hover{background:#e6eef7}
+
+    /* ====== Hero ====== */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:22px;align-items:start}
+    .card{background:white;border-radius:14px;box-shadow:0 6px 20px rgba(12,24,48,0.08);padding:20px}
+    .lead{font-size:28px;margin:0 0 8px}
+    .lead small{display:block;font-size:14px;color:hwb(188 4% 81%);margin-top:8px}
+    .cta{display:flex;gap:10px;margin-top:16px}
+    .btn{padding:10px 14px;border-radius:10px;font-weight:700;border:0;cursor:pointer}
+    .btn-primary{background:oklab(29.763% -0.04244 -0.01145);color:white}
+    .btn-ghost{background:transparent;border:1px solid #cbd5e1}
+
+    /* ====== Stats & skills ====== */
+    .stats{display:flex;gap:0.2px;margin-top:2px}
+    .stat{background:hsl(0, 0%, 95%);color:#0d3b35;padding:1px;border-radius:10px;min-width:70px;text-align:center}
+    .skills{display:flex;flex-wrap:wrap;gap:4px;margin-top:12px}
+    .skill{padding:1px 7px;border-radius:9px;background:#eef2ff;font-weight:600;font-size:13px}
+
+    /* ====== Right column (profile) ====== */
+    .profile-photo{width:100%;height:360px;border-radius:10px;background-image:url('images/Advocate.jpg');background-size:cover;background-position:center}
+    .profile-meta{display:flex;gap:1px;align-items:center;margin-top:4px}
+    .pill{padding:6px 10px;border-radius:999px;background:#0bc4d5;font-weight:700}
+
+    /* ====== Projects grid ====== */
+    .section{margin-top:28px}
+    .section h2{margin:0 0 10px}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+    .project{overflow:hidden;border-radius:12px;background:linear-gradient(180deg,#ffffff, #fbfdff);padding:0;display:flex;flex-direction:column}
+    .project .thumb{height:160px;background-size:cover;background-position:center}
+    .project .meta{padding:14px}
+    .project h3{margin:0 0 8px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:6px 8px;border-radius:8px;background:#eef2ff;font-weight:700}
+
+    /* ====== Gallery ====== */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .gallery img{width:100%;height:180px;object-fit:cover;border-radius:8px}
+
+    /* ====== Contact ====== */
+    form{display:grid;gap:10px}
+    input,textarea,select{padding:10px;border-radius:8px;border:1px solid #e6eef7;font-size:14px}
+    textarea{min-height:140px;resize:vertical}
+
+    /* ====== Footer ====== */
+    footer{margin-top:28px;text-align:center;color:hsl(189, 61%, 13%);font-size:14px}
+
+    /* ====== Responsive ====== */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .profile-photo{height:290px}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:550px){
+      .avatar{width:52px;height:52px}
+      .lead{font-size:22px}
+      .gallery img{height:120px}
+      .gallery{grid-template-columns:1fr}
+    }
+
+    /* ====== Tiny helpers ====== */
+    .muted{color:hsl(186, 67%, 11%)}
+    .center{display:flex;align-items:center;justify-content:center}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">AD`</div>
+        <div>
+          <h1>Advocate Karabo</h1>
+          <div class="sub">Moshal Scholar • Computer Science • Photographer • Podcaster • Innovator</div>
+        </div>
+      </div>
+      <nav>
+        <a class="navlink" href="#about">About</a>
+        <a class="navlink" href="#projects">Projects</a>
+        <a class="navlink" href="#portfolio">Photography</a>
+        <a class="navlink" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card">
+          <p class="muted">Hello  I'm</p>
+          <h2 class="lead">Advocate Karabo<span style="color:hwb(180 3% 71%)">.</span></h2>
+          <p class="muted">Second-year scholar with Moshal Scholarship based at the University of the Western Cape (UWC). I focus on relationships, community-building, photography (portraits , Events), podcast production (The collection Podcast), and building systems that help humanity in the world of AI.</p>
+
+          <div class="stats" aria-hidden="true">
+            <div class="stat">
+              <div style="font-size:18px">5k+</div>
+              <div style="font-size:12px">Photoshoots</div>
+            </div>
+            <div class="stat">
+              <div style="font-size:18px">2+</div>
+              <div style="font-size:12px">Projects</div>
+            </div>
+            <div class="stat">
+              <div style="font-size:18px">2</div>
+              <div style="font-size:12px">Years as scholar</div>
+            </div>
+          </div>
+
+          <div class="skills" aria-hidden="true">
+            <div class="skill">Photography</div>
+            <div class="skill">HTML/CSS/JS</div>
+            <div class="skill">Podcast Production</div>
+            <div class="skill">Community Outreach</div>
+            <div class="skill">UX & Design</div>
+            <div class="skill">AI Systems</div>
+          </div>
+
+          <div class="cta">
+            <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire / Contact</button>
+            <a class="btn btn-ghost" href="#projects">View projects</a>
+          </div>
+
+          <div class="section" id="about">
+            <h2>About me</h2>
+            <p>I’m a multidisciplinary student and creator passionate about technology, storytelling, and human-centered design. Through projects in photography, development, and AI innovation, I focus on building tools and experiences that enhance productivity, creativity, and connection. As a Mushal Scholar at UWC, I’m continuously exploring how tech can empower people to live and work with purpose.</p>
+            
+          </div>
+
+        </div>
+
+        <aside>
+          <div class="card">
+            <div class="profile-photo" role="img" aria-label="Profile photo placeholder"></div>
+            <div class="profile-meta">
+              <div>
+                <div style="font-weight:800">Advocate Karabo</div>
+                <div class="muted">Cape Town, South Africa</div>
+              </div>
+              <div style="margin-left:auto" class="pill">Open to work</div>
+            </div>
+
+            <div style="margin-top:12px">
+              <strong>Contact</strong>
+              <div class="muted">Email: <a href="mailto:your@email.com">advocatekarabo09@gmail.com</a></div>
+              <div class="muted">Phone: +27 65 627 5687</div>
+            </div>
+
+            <div style="margin-top:12px">
+              <strong>Availability</strong>
+              <div class="muted">Weekends: photoshoots • Weekdays: student & remote projects</div>
+            </div>
+
+            <div style="margin-top:12px">
+              <strong>Quick links</strong>
+              <div style="display:flex;gap:8px;margin-top:8px">
+                <a class="btn-ghost" href="#portfolio">Gallery</a>
+                <a class="btn-ghost" href="#contact">Book me</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:12px;">
+            <h3 style="margin:0 0 10px">Skills & Tools</h3>
+            <div class="muted">Photography: Lightroom, basic retouching, outdoor lighting</div>
+            <div style="margin-top:8px" class="muted">Web: HTML, CSS, Vanilla JS, basic Node (for future), Java, & Python</div>
+            <div style="margin-top:8px" class="muted">Audio: Podcast editing, Audacity/Adobe Audition</div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section" id="projects">
+        <h2>Selected projects</h2>
+        <div class="projects">
+
+          <article class="project">
+            <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=60')"></div>
+            <div class="meta">
+              <h3>Community Rebuild Survey — Moshal Scholars. Geekulcha Society</h3>
+              <p class="muted">Design & prototype for a trust-building survey and outreach plan after an internal conflict within the scholarship group. Includes suggested survey flow and event ideas.</p>
+              <div class="tags" style="margin-top:12px">
+                <div class="tag">Design</div>
+                <div class="tag">Community</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=1400&q=60')"></div>
+            <div class="meta">
+              <h3>Camps Bay Beach Day — Photoshoot</h3>
+              <p class="muted">Event photography and candid portrait series shot for Mushal Scholars during a beach day. Delivered gallery and prints.</p>
+              <div class="tags" style="margin-top:12px">
+                <div class="tag">Photography</div>
+                <div class="tag">Events</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1520975917990-3c8f4a2b1d6b?auto=format&fit=crop&w=1400&q=60')"></div>
+            <div class="meta">
+              <h3>Podcast Production — Short series</h3>
+              <p class="muted">Produced and edited a short interview series. Full workflow: recording, editing, chapter timestamps, and publishing guidance.</p>
+              <div class="tags" style="margin-top:12px">
+                <div class="tag">Audio</div>
+                <div class="tag">Production</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="thumb" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1400&q=60')"></div>
+            <div class="meta">
+              <h3>Personal Portfolio (this site)</h3>
+              <p class="muted">A single-file responsive portfolio template you can edit and host on any static host (GitHub Pages, Vercel, Netlify).</p>
+              <div class="tags" style="margin-top:12px">
+                <div class="tag">Web</div>
+                <div class="tag">Template</div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="section" id="portfolio">
+        <h2>Photography gallery</h2>
+        <p class="muted">A selection of recent shoots — click any image to open it in a lightbox.</p>
+        <div class="gallery" id="gallery">
+          <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=60" alt="beach portrait 1  ">
+          <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?auto=format&fit=crop&w=1200&q=60" alt="beach portrait 2">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=60" alt="group at beach">
+          <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=1200&q=60" alt="portrait 4">
+          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=60" alt="portrait 5">
+          <img src="https://images.unsplash.com/photo-1499257398703-3f2b63f38f5f?auto=format&fit=crop&w=1200&q=60" alt="portrait 6">
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <h2>Contact & booking</h2>
+        <div style="display:grid;grid-template-columns:1fr 360px;gap:16px">
+
+          <div class="card">
+            <form id="contactForm">
+              <label for="name">Name</label>
+              <input id="name" name="name" placeholder="Your full name" required>
+
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required>
+
+              <label for="service">Service</label>
+              <select id="service" name="service">
+                <option>Photoshoot</option>
+                <option>Podcast production</option>
+                <option>Web project</option>
+                <option>Other</option>
+              </select>
+
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me about your idea..." required></textarea>
+
+              <div style="display:flex;gap:8px;margin-top:8px">
+                <button type="submit" class="btn btn-primary">Send message</button>
+                <button type="button" id="saveDraft" class="btn btn-ghost">Save draft</button>
+              </div>
+
+              <p id="formStatus" class="muted" style="margin-top:10px"></p>
+            </form>
+          </div>
+
+          <aside class="card">
+            <h3>Booking & rates (sample)</h3>
+            <p class="muted">Weekend photoshoots from ZAR 800. Events and longer sessions priced per enquiry. Podcast production quotes on request.</p>
+
+            <h3 style="margin-top:12px">Social</h3>
+            <p class="muted">Instagram: <a href="https://instagram.com" target="_blank" rel="noopener">@Advoow</a></p>
+            <p class="muted">LinkedIn: <a href="https://linkedin.com" target="_blank" rel="noopener">Advocate Karabo</a></p>
+
+            <h3 style="margin-top:12px">Quick actions</h3>
+            <div style="display:flex;gap:8px;margin-top:8px">
+              <a class="btn-ghost" href="mailto:your@email.com">Email me</a>
+              <a class="btn-ghost" href="#portfolio">View gallery</a>
+            </div>
+          </aside>
+
+        </div>
+      </section>
+
+      <footer>
+        <div class="muted">© <span id="year"></span> Advocate Karabo — Built with ❤️ • Hosted on static sites</div>
+      </footer>
+
+    </main>
+
+  </div>
+
+  <!-- ====== Lightbox markup (hidden, JS uses it) ====== -->
+  <div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(2,6,23,0.8);align-items:center;justify-content:center;padding:20px;z-index:9999">
+    <div style="max-width:1100px;width:100%;height:80%;display:flex;align-items:center;justify-content:center">
+      <img id="lightboxImg" src="" alt="expanded" style="max-width:100%;max-height:100%;border-radius:8px;box-shadow:0 10px 40px rgba(0,0,0,0.4)">
+    </div>
+  </div>
+
+  <script>
+    // ====== Small interactive behaviours ======
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Gallery lightbox
+    const gallery = document.getElementById('gallery');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+
+    gallery.querySelectorAll('img').forEach(img=>{
+      img.style.cursor='zoom-in';
+      img.addEventListener('click', ()=>{
+        lightboxImg.src = img.src;
+        lightbox.style.display = 'flex';
+      })
+    })
+
+    lightbox.addEventListener('click', (e)=>{
+      if(e.target === lightbox || e.target === lightboxImg) {
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+      }
+    })
+
+    // Contact form handling: local demo behaviour (no server).
+    // - Save drafts to localStorage
+    // - Send uses mailto (simple) and also stores a copy in localStorage as 'sentMessages'
+
+    const form = document.getElementById('contactForm');
+    const saveDraft = document.getElementById('saveDraft');
+    const status = document.getElementById('formStatus');
+
+    // Prefill from draft if present
+    const draft = JSON.parse(localStorage.getItem('contactDraft')||'null');
+    if(draft){
+      form.name.value = draft.name || '';
+      form.email.value = draft.email || '';
+      form.service.value = draft.service || '';
+      form.message.value = draft.message || '';
+      status.textContent = 'Draft loaded from local storage.';
+    }
+
+    saveDraft.addEventListener('click', ()=>{
+      const d = {
+        name: form.name.value,
+        email: form.email.value,
+        service: form.service.value,
+        message: form.message.value,
+        savedAt: new Date().toISOString()
+      };
+      localStorage.setItem('contactDraft', JSON.stringify(d));
+      status.textContent = 'Draft saved locally.';
+    })
+
+    form.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const payload = {
+        name: form.name.value,
+        email: form.email.value,
+        service: form.service.value,
+        message: form.message.value,
+        sentAt: new Date().toISOString()
+      };
+
+      // store a copy locally
+      const existing = JSON.parse(localStorage.getItem('sentMessages')||'[]');
+      existing.push(payload);
+      localStorage.setItem('sentMessages', JSON.stringify(existing));
+
+      // clear draft
+      localStorage.removeItem('contactDraft');
+
+      // fallback: open mail client with prefilled content (user can edit and send)
+      const subject = encodeURIComponent('Booking enquiry: ' + payload.service + ' — ' + payload.name);
+      const body = encodeURIComponent(payload.message + '\n\nContact email: ' + payload.email);
+      window.location.href = `mailto:your@email.com?subject=${subject}&body=${body}`;
+
+      status.textContent = 'Message prepared in your mail client — a copy was saved locally.';
+      form.reset();
+    })
+
+    // Small utility: keyboard shortcut to focus contact (press "b")
+    window.addEventListener('keydown', (e)=>{
+      if(e.key === 'b' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA'){
+        e.preventDefault();
+        document.getElementById('email').focus();
+      }
+    })
+
+    // Accessibility: allow Esc to close lightbox
+    window.addEventListener('keydown', (e)=>{
+      if(e.key === 'Escape'){
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+      }
+    })
+
+    // Small README for editing — will appear in console for the developer
+    console.log(`
+      Portfolio template loaded. Quick tips:\n
+      - Replace placeholder images (Unsplash links) with your own photos.\n      - Update contact email/phone in the header and contact aside.\n      - Projects are in the #projects section (each .project).\n      - To host: put this file on GitHub Pages / Netlify / Vercel as index.html.\n    `);
+  </script>
+</body>
+</html>
